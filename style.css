@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top, #1f2a44 0%, #101726 45%, #090d16 100%);
+    color: #f5f5f5;
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(8, 12, 22, 0.92);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+    padding: 14px 10px 16px;
+    z-index: 1000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+}
+
+.nav-title {
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #f0c75e;
+    text-shadow: 0 0 8px rgba(240, 199, 94, 0.2);
+}
+
+.menu {
+    list-style: none;
+    margin: 14px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    display: inline-block;
+    min-width: 110px;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: #f8f8f8;
+    background: linear-gradient(135deg, #182338, #243552);
+    border: 1px solid rgba(240, 199, 94, 0.4);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.menu a:hover {
+    background: linear-gradient(135deg, #243552, #31486d);
+    color: #ffd970;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.menu a.active {
+    background: linear-gradient(135deg, #7a1f2b, #a62c3b);
+    border-color: rgba(255, 215, 120, 0.6);
+    color: #fff7dc;
+}
+
+.page-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px 10px 30px;
+}
+
+.genre-section {
+    margin-bottom: 18px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.genre-section h2 {
+    margin: 0 0 16px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #f0c75e;
+    letter-spacing: 1px;
+    border-left: 5px solid #a62c3b;
+    padding-left: 12px;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    gap: 10px;
+    justify-content: center;
+    align-items: start;
+}
+
+.movie-card {
+    width: 200px;
+    min-height: 320px;
+    padding: 10px;
+    border-radius: 16px;
+    border: 1px solid rgba(20, 20, 20, 0.15);
+    text-align: center;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.28);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    background: #d7dce4;
+}
+
+.movie-card h3 {
+    margin: 12px 0 6px;
+    font-size: 15px;
+    min-height: 42px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.movie-card p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Status filmova - ostavljeno po uslovu zadatka */
+.current {
+    background-color: white;
+    color: #111;
+}
+
+.soon {
+    background-color: powderblue;
+    color: #111;
+}
+
+.old {
+    background-color: gray;
+    color: white;
+}
+
+@media (max-width: 1079px) {
+    .movies-grid {
+        grid-template-columns: repeat(3, 200px);
+    }
+}
+
+@media (max-width: 799px) {
+    .movies-grid {
+        grid-template-columns: 200px;
+    }
+}
+
+@media (max-width: 520px) {
+    .top-nav {
+        padding-bottom: 12px;
+    }
+
+    .nav-title {
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu a {
+        width: 160px;
+    }
+
+    .page-content {
+        padding-top: 205px;
+    }
+
+    .genre-section {
+        padding: 12px;
+    }
+}
