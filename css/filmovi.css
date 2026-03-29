@@ -205,3 +205,71 @@ body {
         padding: 12px;
     }
 }
+
+
+
+.movies-legend-section {
+    margin-bottom: 18px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.movies-legend-section h2 {
+    margin: 0 0 16px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #f0c75e;
+    letter-spacing: 1px;
+    border-left: 5px solid #a62c3b;
+    padding-left: 12px;
+}
+
+.movies-legend {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.movies-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f5f5f5;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.movies-legend-color {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.movies-legend-color.current {
+    background-color: white;
+}
+
+.movies-legend-color.soon {
+    background-color: powderblue;
+}
+
+.movies-legend-color.old {
+    background-color: gray;
+}
+
+@media (max-width: 520px) {
+    .movies-legend {
+        justify-content: flex-start;
+        gap: 14px;
+    }
+
+    .movies-legend-item {
+        font-size: 15px;
+    }
+}
