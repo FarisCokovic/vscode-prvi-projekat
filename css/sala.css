@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at top, #1f2a44 0%, #101726 45%, #090d16 100%);
+    color: #f5f5f5;
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(8, 12, 22, 0.92);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+    padding: 14px 10px 16px;
+    z-index: 1000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+}
+
+.nav-title {
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #f0c75e;
+    text-shadow: 0 0 8px rgba(240, 199, 94, 0.2);
+}
+
+.menu {
+    list-style: none;
+    margin: 14px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    display: inline-block;
+    min-width: 110px;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: #f8f8f8;
+    background: linear-gradient(135deg, #182338, #243552);
+    border: 1px solid rgba(240, 199, 94, 0.4);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.menu a:hover {
+    background: linear-gradient(135deg, #243552, #31486d);
+    color: #ffd970;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.menu a.active {
+    background: linear-gradient(135deg, #7a1f2b, #a62c3b);
+    border-color: rgba(255, 215, 120, 0.6);
+    color: #fff7dc;
+}
+
+.page-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px 10px 30px;
+}
+
+.cinema-info,
+.hall-section {
+    max-width: 1100px;
+    margin: 0 auto 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    padding: 18px;
+}
+
+.cinema-info h2,
+.hall-section h2 {
+    margin: 0 0 16px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #f0c75e;
+    letter-spacing: 1px;
+    border-left: 5px solid #a62c3b;
+    padding-left: 12px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.info-box {
+    background: linear-gradient(135deg, #182338, #243552);
+    border: 1px solid rgba(240, 199, 94, 0.28);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.info-label {
+    display: block;
+    font-size: 13px;
+    color: #f0c75e;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
